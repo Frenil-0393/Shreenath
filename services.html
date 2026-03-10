@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Services offered by Shreenath Auto Advisers including registration, transfer, licensing, and complete RTO consulting." />
+  <title>Services | Shreenath Auto Advisers</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512x512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=Literata:opsz,wght@7..72,600;7..72,700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-services">
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Shreenath Auto Advisers Home">
+        <span class="brand-logo" aria-hidden="true">SAA</span>
+        <span class="brand-text">
+          <strong>Shreenath Auto Advisers</strong>
+          <small data-i18n="brand.tagline">Your RTO Consultancy Partner</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About Us</a>
+        <a href="services.html" class="active" data-i18n="nav.services">Services</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#" class="disabled-link" aria-disabled="true" data-i18n="nav.login">Login</a>
+
+        <div class="mobile-pref-list" aria-label="Mobile preferences">
+          <p class="mobile-pref-title" data-i18n="mobile.pref.title">Preferences</p>
+          <details class="mobile-pref-group">
+            <summary data-i18n="mobile.pref.language">Language</summary>
+            <div class="mobile-pref-menu">
+              <button type="button" data-lang="en" data-i18n="mobile.lang.en">English</button>
+              <button type="button" data-lang="gu">ગુજરાતી</button>
+            </div>
+          </details>
+          <details class="mobile-pref-group">
+            <summary data-i18n="mobile.pref.theme">Theme</summary>
+            <div class="mobile-pref-menu">
+              <button type="button" data-theme-mode="system" data-i18n="theme.system">System</button>
+              <button type="button" data-theme-mode="light" data-i18n="theme.light">Light</button>
+              <button type="button" data-theme-mode="dark" data-i18n="theme.dark">Dark</button>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-toggle-btn" id="langToggleBtn" aria-haspopup="true" aria-expanded="false">
+            <svg class="lang-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="langLabel">EN</span>
+            <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg>
+          </button>
+          <div class="dropdown-menu" id="langMenu">
+            <button data-lang="en" class="active">English</button>
+            <button data-lang="gu">ગુજરાતી</button>
+          </div>
+        </div>
+
+        <div class="theme-dropdown" id="themeDropdown">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zm8-5a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0118 10zM5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 015 10zm11.95-4.95a.75.75 0 010 1.06l-1.06 1.06a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zM5.05 16.95a.75.75 0 010-1.06l1.06-1.06a.75.75 0 111.06 1.06l-1.06 1.06a.75.75 0 01-1.06 0zm11.9 0a.75.75 0 01-1.06 0l-1.06-1.06a.75.75 0 111.06-1.06l1.06 1.06a.75.75 0 010 1.06zM5.05 5.05a.75.75 0 01-1.06 0L2.93 3.99a.75.75 0 011.06-1.06l1.06 1.06a.75.75 0 010 1.06zM10 7a3 3 0 100 6 3 3 0 000-6z" /></svg>
+            <span id="themeLabel" data-i18n="theme.label">Theme</span>
+            <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg>
+          </button>
+          <div class="dropdown-menu" id="themeMenu">
+            <button data-theme-mode="system" class="active" data-i18n="theme.system">System</button>
+            <button data-theme-mode="light" data-i18n="theme.light">Light</button>
+            <button data-theme-mode="dark" data-i18n="theme.dark">Dark</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main>
+    <!-- Services Listing -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="eyebrow reveal" data-i18n="services.eyebrow">Our Comprehensive Services</p>
+        <h1 class="section-title reveal" data-i18n="services.title">A Solution for Every Need</h1>
+        <p class="section-subtitle reveal" data-i18n="services.subtitle">We offer a complete suite of RTO services for new and existing vehicle owners, handled with precision and professional care.</p>
+
+        <div class="card-grid three-col">
+          <article class="service-card reveal">
+            <div class="card-icon">&#128663;</div>
+            <h3 data-i18n="services.s1.title">New Vehicle Registration</h3>
+            <p data-i18n="services.s1.desc">Complete assistance for swift and error-free registration of your new vehicle.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128196;</div>
+            <h3 data-i18n="services.s2.title">Transfer of Ownership</h3>
+            <p data-i18n="services.s2.desc">Seamless transfer process with all legal and procedural formalities covered.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#127380;</div>
+            <h3 data-i18n="services.s3.title">Driving License Services</h3>
+            <p data-i18n="services.s3.desc">Support for learner's license, permanent license, and renewals.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#9989;</div>
+            <h3 data-i18n="services.s4.title">Vehicle Fitness Certificate</h3>
+            <p data-i18n="services.s4.desc">Assistance in obtaining or renewing fitness certificates efficiently.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128220;</div>
+            <h3 data-i18n="services.s5.title">No Objection Certificate (NOC)</h3>
+            <p data-i18n="services.s5.desc">Inter-state vehicle transfer support with complete documentation.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128275;</div>
+            <h3 data-i18n="services.s6.title">Hypothecation Removal</h3>
+            <p data-i18n="services.s6.desc">Removal of bank lien from RC after successful loan closure.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128195;</div>
+            <h3 data-i18n="services.s7.title">Duplicate RC / License</h3>
+            <p data-i18n="services.s7.desc">Official process support for duplicate document issuance.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#127968;</div>
+            <h3 data-i18n="services.s8.title">Address Change in RC / DL</h3>
+            <p data-i18n="services.s8.desc">Efficient updates to match your latest address details.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128736;</div>
+            <h3 data-i18n="services.s9.title">All RTO Consulting</h3>
+            <p data-i18n="services.s9.desc">Custom support for unique and complex RTO requirements.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128737;</div>
+            <h3 data-i18n="services.s10.title">Vehicle Insurance Services</h3>
+            <p data-i18n="services.s10.desc">New policies and timely renewals from reputed providers.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#128666;</div>
+            <h3 data-i18n="services.s11.title">Commercial Vehicle Permits</h3>
+            <p data-i18n="services.s11.desc">Permit application and renewal for business compliance.</p>
+          </article>
+          <article class="service-card reveal">
+            <div class="card-icon">&#11088;</div>
+            <h3 data-i18n="services.s12.title">Fancy Number Registration</h3>
+            <p data-i18n="services.s12.desc">Guidance for acquiring choice registration numbers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow reveal" data-i18n="services.process.eyebrow">Our Process</p>
+        <h2 class="section-title reveal" data-i18n="services.process.title">Simple Three-Step Process</h2>
+        <div class="accent-bar"></div>
+        <div class="process-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="process-step reveal">
+            <span class="step-number">1</span>
+            <h3 data-i18n="services.process.s1.title">Get Consultation</h3>
+            <p data-i18n="services.process.s1.desc">Talk to our team about your specific RTO requirement.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="step-number">2</span>
+            <h3 data-i18n="services.process.s2.title">Document Preparation</h3>
+            <p data-i18n="services.process.s2.desc">We prepare all your documents and necessary forms.</p>
+          </div>
+          <div class="process-step reveal">
+            <span class="step-number">3</span>
+            <h3 data-i18n="services.process.s3.title">RTO Processing</h3>
+            <p data-i18n="services.process.s3.desc">Our team handles the complete RTO procedure efficiently.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Checklist -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="services.docs.title">Common Required Documents</h2>
+        <p class="section-subtitle reveal" data-i18n="services.docs.subtitle">Keep these documents ready when visiting our office.</p>
+        <div class="checklist-grid">
+          <div class="checklist-item reveal">
+            <span class="check-icon">&#10003;</span>
+            <div>
+              <h4 data-i18n="services.doc1.title">Original RC Book</h4>
+              <p data-i18n="services.doc1.desc">Vehicle registration certificate</p>
+            </div>
+          </div>
+          <div class="checklist-item reveal">
+            <span class="check-icon">&#10003;</span>
+            <div>
+              <h4 data-i18n="services.doc2.title">Insurance Policy</h4>
+              <p data-i18n="services.doc2.desc">Valid vehicle insurance document</p>
+            </div>
+          </div>
+          <div class="checklist-item reveal">
+            <span class="check-icon">&#10003;</span>
+            <div>
+              <h4 data-i18n="services.doc3.title">Identity Proofs</h4>
+              <p data-i18n="services.doc3.desc">Aadhaar card, PAN card, address proofs</p>
+            </div>
+          </div>
+          <div class="checklist-item reveal">
+            <span class="check-icon">&#10003;</span>
+            <div>
+              <h4 data-i18n="services.doc4.title">PUC Certificate</h4>
+              <p data-i18n="services.doc4.desc">Valid pollution under control certificate</p>
+            </div>
+          </div>
+          <div class="checklist-item reveal">
+            <span class="check-icon">&#10003;</span>
+            <div>
+              <h4 data-i18n="services.doc5.title">Form 29 and 30</h4>
+              <p data-i18n="services.doc5.desc">Signed forms for ownership transfer</p>
+            </div>
+          </div>
+          <div class="checklist-item reveal">
+            <span class="check-icon">&#10003;</span>
+            <div>
+              <h4 data-i18n="services.doc6.title">Passport Size Photos</h4>
+              <p data-i18n="services.doc6.desc">Recent colour photographs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="services.faq.title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary data-i18n="services.faq.q1">What makes Shreenath Auto a trusted RTO advisor?</summary>
+            <p data-i18n="services.faq.a1">Our decades of experience, transparent communication, and client-focused approach make us a dependable partner.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="services.faq.q2">Do you provide RTO consultant services in Dhoraji?</summary>
+            <p data-i18n="services.faq.a2">Yes, our Dhoraji branch is fully equipped to offer all RTO consultancy services with personal support.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="services.faq.q3">What documents do I need to transfer vehicle ownership?</summary>
+            <p data-i18n="services.faq.a3">Typically original RC, insurance, PUC, ID/address proofs of both parties, and signed Forms 29 and 30.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary data-i18n="services.faq.q4">How long does the RTO process usually take?</summary>
+            <p data-i18n="services.faq.a4">The timeline varies by service, but our process ensures fast turnaround and regular status updates.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <h2 data-i18n="services.cta.title">Ready to Get Your RTO Work Done?</h2>
+          <p data-i18n="services.cta.desc">Talk to our experts today and let us handle the complexity for you.</p>
+          <a href="contact.html" class="btn btn-primary" data-i18n="services.cta.btn">Contact Us Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-logo" aria-hidden="true">SAA</span>
+          <span class="brand-text">
+            <strong>Shreenath Auto Advisers</strong>
+            <small data-i18n="brand.tagline">Your RTO Consultancy Partner</small>
+          </span>
+        </div>
+        <p data-i18n="footer.desc">Providing trusted RTO consultancy services with decades of experience and commitment to transparency.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Get In Touch</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+919825866262">+91 98258 66262</a></li>
+          <li><a href="tel:+919925466261">+91 99254 66261</a></li>
+          <li><a href="tel:+919099561439">+91 90995 61439</a></li>
+          <li><a href="mailto:shreenath.auto3930@gmail.com">shreenath.auto3930@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright" data-i18n="footer.copyright">&copy; 2025 Shreenath Auto Advisers. All Rights Reserved.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+  <script src="script.js"></script>
+</body>
+</html>

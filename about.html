@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Shreenath Auto Advisers - Our story, mission, values, and expert team." />
+  <title>About Us | Shreenath Auto Advisers</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="images/icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512x512.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&family=Literata:opsz,wght@7..72,600;7..72,700&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-about">
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand" aria-label="Shreenath Auto Advisers Home">
+        <span class="brand-logo" aria-hidden="true">SAA</span>
+        <span class="brand-text">
+          <strong>Shreenath Auto Advisers</strong>
+          <small data-i18n="brand.tagline">Your RTO Consultancy Partner</small>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="active" data-i18n="nav.about">About Us</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="#" class="disabled-link" aria-disabled="true" data-i18n="nav.login">Login</a>
+
+        <div class="mobile-pref-list" aria-label="Mobile preferences">
+          <p class="mobile-pref-title" data-i18n="mobile.pref.title">Preferences</p>
+          <details class="mobile-pref-group">
+            <summary data-i18n="mobile.pref.language">Language</summary>
+            <div class="mobile-pref-menu">
+              <button type="button" data-lang="en" data-i18n="mobile.lang.en">English</button>
+              <button type="button" data-lang="gu">ગુજરાતી</button>
+            </div>
+          </details>
+          <details class="mobile-pref-group">
+            <summary data-i18n="mobile.pref.theme">Theme</summary>
+            <div class="mobile-pref-menu">
+              <button type="button" data-theme-mode="system" data-i18n="theme.system">System</button>
+              <button type="button" data-theme-mode="light" data-i18n="theme.light">Light</button>
+              <button type="button" data-theme-mode="dark" data-i18n="theme.dark">Dark</button>
+            </div>
+          </details>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-dropdown" id="langDropdown">
+          <button class="lang-toggle-btn" id="langToggleBtn" aria-haspopup="true" aria-expanded="false">
+            <svg class="lang-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span id="langLabel">EN</span>
+            <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg>
+          </button>
+          <div class="dropdown-menu" id="langMenu">
+            <button data-lang="en" class="active">English</button>
+            <button data-lang="gu">ગુજરાતી</button>
+          </div>
+        </div>
+
+        <div class="theme-dropdown" id="themeDropdown">
+          <button class="theme-toggle-btn" id="themeToggleBtn" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 2a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 2zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 15zm8-5a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0118 10zM5 10a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 015 10zm11.95-4.95a.75.75 0 010 1.06l-1.06 1.06a.75.75 0 01-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zM5.05 16.95a.75.75 0 010-1.06l1.06-1.06a.75.75 0 111.06 1.06l-1.06 1.06a.75.75 0 01-1.06 0zm11.9 0a.75.75 0 01-1.06 0l-1.06-1.06a.75.75 0 111.06-1.06l1.06 1.06a.75.75 0 010 1.06zM5.05 5.05a.75.75 0 01-1.06 0L2.93 3.99a.75.75 0 011.06-1.06l1.06 1.06a.75.75 0 010 1.06zM10 7a3 3 0 100 6 3 3 0 000-6z" /></svg>
+            <span id="themeLabel" data-i18n="theme.label">Theme</span>
+            <svg class="dropdown-caret" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" /></svg>
+          </button>
+          <div class="dropdown-menu" id="themeMenu">
+            <button data-theme-mode="system" class="active" data-i18n="theme.system">System</button>
+            <button data-theme-mode="light" data-i18n="theme.light">Light</button>
+            <button data-theme-mode="dark" data-i18n="theme.dark">Dark</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main>
+    <!-- Our Story -->
+    <section class="section">
+      <div class="container two-col-layout">
+        <div class="reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">Our Story &amp; Commitment</p>
+          <h1 class="section-title" data-i18n="about.title">Who We Are</h1>
+          <p data-i18n="about.p1">Welcome to Shreenath Auto Advisers. Our story is one of dedicated growth and unwavering commitment to serving our community's RTO needs.</p>
+          <p data-i18n="about.p2">Our journey began with the establishment of our first branch in Jamkandorana, initially named Anupam Auto Advisers.</p>
+          <p data-i18n="about.p3">Founded on integrity and efficiency, we quickly built a reputation for reliable service. As our vision grew, we rebranded to Shreenath Auto Advisers to reflect our commitment to a comprehensive and client-focused consultancy.</p>
+          <p data-i18n="about.p4">Fueled by client trust, we opened our second branch in Dhoraji, bringing expert advice and hands-on assistance to a wider audience.</p>
+        </div>
+
+        <div class="mission-box reveal">
+          <h3 data-i18n="about.mission.title">Our Mission and Values</h3>
+          <p data-i18n="about.mission.desc">Our mission is simple: simplify the complexities of the RTO through reliable support and clear processes.</p>
+          <ul>
+            <li><strong data-i18n="about.mission.v1.label">Reliability:</strong> <span data-i18n="about.mission.v1">Accurate and timely completion of your work.</span></li>
+            <li><strong data-i18n="about.mission.v2.label">Transparency:</strong> <span data-i18n="about.mission.v2">Clear communication with no hidden charges.</span></li>
+            <li><strong data-i18n="about.mission.v3.label">Customer Focus:</strong> <span data-i18n="about.mission.v3">Long-term relationships built on trust.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="about.timeline.title">Our Journey</h2>
+        <p class="section-subtitle reveal" data-i18n="about.timeline.subtitle">Key milestones in our growth and achievements.</p>
+        <div class="accent-bar"></div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2004</span>
+            <h3 data-i18n="about.tl1.title">First Branch Established</h3>
+            <p data-i18n="about.tl1.desc">Started as Anupam Auto Advisers in Jamkandorana with a vision to simplify RTO services.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2012</span>
+            <h3 data-i18n="about.tl2.title">Rebranded to Shreenath</h3>
+            <p data-i18n="about.tl2.desc">Rebranded to Shreenath Auto Advisers to reflect our expanded vision and commitment.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2018</span>
+            <h3 data-i18n="about.tl3.title">Dhoraji Branch Opened</h3>
+            <p data-i18n="about.tl3.desc">Expanded to Dhoraji to serve more clients with the same trusted quality.</p>
+          </div>
+          <div class="timeline-item reveal">
+            <span class="timeline-year">2025</span>
+            <h3 data-i18n="about.tl4.title">Digital Presence</h3>
+            <p data-i18n="about.tl4.desc">Launched our website and digital services to reach clients beyond our physical branches.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="about.ach.title">Our Achievements</h2>
+        <div class="achievements-grid">
+          <div class="achievement-badge reveal">
+            <span class="badge-icon">&#127942;</span>
+            <h4 data-i18n="about.ach1.title">Trusted Service</h4>
+            <p data-i18n="about.ach1.desc">10,000+ Satisfied Clients</p>
+          </div>
+          <div class="achievement-badge reveal">
+            <span class="badge-icon">&#128188;</span>
+            <h4 data-i18n="about.ach2.title">Experienced Team</h4>
+            <p data-i18n="about.ach2.desc">21+ Years of Expertise</p>
+          </div>
+          <div class="achievement-badge reveal">
+            <span class="badge-icon">&#127970;</span>
+            <h4 data-i18n="about.ach3.title">Two Branches</h4>
+            <p data-i18n="about.ach3.desc">Jamkandorana &amp; Dhoraji</p>
+          </div>
+          <div class="achievement-badge reveal">
+            <span class="badge-icon">&#128736;</span>
+            <h4 data-i18n="about.ach4.title">Full Services</h4>
+            <p data-i18n="about.ach4.desc">12+ RTO Service Types</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal" data-i18n="about.team.title">Meet Our Experts</h2>
+        <p class="section-subtitle reveal" data-i18n="about.team.subtitle">The experienced team dedicated to prompt, transparent, and superior service.</p>
+
+        <div class="card-grid four-col">
+          <article class="team-card reveal">
+            <img class="team-photo" src="images/chetan.webp" alt="Chetan Patel, Founder and RTO Adviser" />
+            <h3 data-i18n="about.team.chetan">Chetan Patel</h3>
+            <p data-i18n="about.team.chetan.role">Founder &amp; RTO Adviser</p>
+          </article>
+          <article class="team-card reveal">
+            <img class="team-photo" src="images/jasmin.webp" alt="Jasmin Patel, Technical Specialist" />
+            <h3 data-i18n="about.team.jasmin">Jasmin Patel</h3>
+            <p data-i18n="about.team.jasmin.role">Technical Specialist</p>
+          </article>
+          <article class="team-card reveal">
+            <img class="team-photo" src="images/divyesh.webp" alt="Divyesh Patel, Branch Manager Dhoraji" />
+            <h3 data-i18n="about.team.divyesh">Divyesh Patel</h3>
+            <p data-i18n="about.team.divyesh.role">Branch Manager, Dhoraji</p>
+          </article>
+          <article class="team-card reveal">
+            <img class="team-photo" src="images/frenil.webp" alt="Frenil Patel, Designer and Developer of Website" />
+            <h3 data-i18n="about.team.frenil">Frenil Patel</h3>
+            <p data-i18n="about.team.frenil.role">Designer and Developer of Website</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-logo" aria-hidden="true">SAA</span>
+          <span class="brand-text">
+            <strong>Shreenath Auto Advisers</strong>
+            <small data-i18n="brand.tagline">Your RTO Consultancy Partner</small>
+          </span>
+        </div>
+        <p data-i18n="footer.desc">Providing trusted RTO consultancy services with decades of experience and commitment to transparency.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.links">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact">Get In Touch</h4>
+        <ul class="footer-links">
+          <li><a href="tel:+919825866262">+91 98258 66262</a></li>
+          <li><a href="tel:+919925466261">+91 99254 66261</a></li>
+          <li><a href="tel:+919099561439">+91 90995 61439</a></li>
+          <li><a href="mailto:shreenath.auto3930@gmail.com">shreenath.auto3930@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright" data-i18n="footer.copyright">&copy; 2025 Shreenath Auto Advisers. All Rights Reserved.</p>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">&uarr;</button>
+  <script src="script.js"></script>
+</body>
+</html>
