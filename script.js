@@ -289,6 +289,21 @@ var THEME_KEY = "saa-theme-mode";
 var LANG_KEY = "saa-lang";
 var systemQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
+function closeOpenMenus(closeNav) {
+  if (themeMenu) themeMenu.classList.remove("open");
+  if (langMenu) langMenu.classList.remove("open");
+
+  document.querySelectorAll(".mobile-pref-group.is-open").forEach(function(group) {
+    group.classList.remove("is-open");
+  });
+
+  if (closeNav && mainNav && menuBtn) {
+    mainNav.classList.remove("open");
+    menuBtn.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }
+}
+
 // ─── THEME SYSTEM ──────────────────────────────────────────────
 function getStoredThemeMode() {
   return localStorage.getItem(THEME_KEY) || "system";
@@ -422,23 +437,34 @@ document.addEventListener("click", function(e) {
   var langBtn = e.target.closest('.mobile-pref-menu button[data-lang]');
   if (langBtn) {
     applyLanguage(langBtn.getAttribute("data-lang"));
-    if (mainNav && menuBtn) {
-      mainNav.classList.remove("open");
-      menuBtn.classList.remove("open");
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
+    closeOpenMenus(true);
     return;
   }
 
   var themeBtn = e.target.closest('.mobile-pref-menu button[data-theme-mode]');
   if (themeBtn) {
     setThemeMode(themeBtn.getAttribute("data-theme-mode"));
-    if (mainNav && menuBtn) {
-      mainNav.classList.remove("open");
-      menuBtn.classList.remove("open");
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
+    closeOpenMenus(true);
   }
+});
+
+// Mobile language/theme panel animation (inside hamburger menu)
+document.querySelectorAll(".mobile-pref-group").forEach(function(group) {
+  group.removeAttribute("open");
+  var summary = group.querySelector("summary");
+  if (!summary) return;
+
+  summary.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var willOpen = !group.classList.contains("is-open");
+
+    document.querySelectorAll(".mobile-pref-group.is-open").forEach(function(other) {
+      if (other !== group) other.classList.remove("is-open");
+    });
+
+    group.classList.toggle("is-open", willOpen);
+  });
 });
 
 // Apply stored language
@@ -449,8 +475,7 @@ if (storedLang !== "en") {
 
 // Close dropdowns on outside click
 document.addEventListener("click", function() {
-  if (themeMenu) themeMenu.classList.remove("open");
-  if (langMenu) langMenu.classList.remove("open");
+  closeOpenMenus(false);
 });
 
 // ─── MOBILE MENU ───────────────────────────────────────────────
@@ -566,6 +591,9 @@ var bgShape1 = document.querySelector(".bg-shape-1");
 var bgShape2 = document.querySelector(".bg-shape-2");
 
 window.addEventListener("scroll", function() {
+  // Close open dropdowns/menus while scrolling
+  closeOpenMenus(true);
+
   // Back to top visibility
   backToTopBtn.classList.toggle("visible", window.scrollY > 450);
 

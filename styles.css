@@ -129,10 +129,23 @@ button { font-family: inherit; cursor: pointer; }
   height: 46px;
   border-radius: 12px;
   background: url("images/logo.png") center/cover no-repeat;
+  background-color: #ffffff;
   border: 1px solid var(--border);
   box-shadow: var(--shadow-sm);
   text-indent: -9999px;
   overflow: hidden;
+  filter: none;
+}
+
+[data-theme="dark"] .brand-logo {
+  background-image: url("images/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+  filter: none;
+  mix-blend-mode: normal;
 }
 
 .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
@@ -284,6 +297,7 @@ button { font-family: inherit; cursor: pointer; }
   border-radius: var(--radius-sm);
   background: var(--surface-alt);
   margin-bottom: 0.5rem;
+  overflow: hidden;
 }
 
 .mobile-pref-group summary {
@@ -293,6 +307,27 @@ button { font-family: inherit; cursor: pointer; }
   font-size: 0.84rem;
   font-weight: 600;
   color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mobile-pref-group summary::after {
+  content: "▾";
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: transform 0.25s ease, color 0.2s;
+}
+
+.mobile-pref-group.is-open summary {
+  background: var(--primary-lighter);
+  color: var(--primary);
+}
+
+.mobile-pref-group.is-open summary::after {
+  transform: rotate(180deg);
+  color: var(--primary);
 }
 
 .mobile-pref-group summary::-webkit-details-marker {
@@ -302,6 +337,16 @@ button { font-family: inherit; cursor: pointer; }
 .mobile-pref-menu {
   display: grid;
   gap: 0.35rem;
+  padding: 0 0.5rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.28s ease, opacity 0.2s ease, padding 0.2s ease;
+}
+
+.mobile-pref-group.is-open .mobile-pref-menu {
+  max-height: 220px;
+  opacity: 1;
   padding: 0 0.5rem 0.5rem;
 }
 
@@ -332,6 +377,7 @@ button { font-family: inherit; cursor: pointer; }
   flex-direction: column;
   gap: 4px;
   cursor: pointer;
+  margin-left: auto;
 }
 
 .menu-btn span {
@@ -1292,7 +1338,7 @@ button { font-family: inherit; cursor: pointer; }
 @media (max-width: 1080px) {
   .main-nav {
     position: absolute;
-    top: var(--header-h);
+    top: calc(var(--header-h) + 10px);
     right: 4%;
     left: 4%;
     flex-direction: column;
@@ -1354,8 +1400,10 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 @media (max-width: 700px) {
-  .nav-wrap { flex-wrap: wrap; }
+  .nav-wrap { flex-wrap: nowrap; }
+  .menu-btn { margin-left: auto; }
   .brand-text strong { font-size: 0.85rem; }
+  .brand-text small { display: none; }
   .hero-inner { min-height: 420px; padding: 2.5rem 0; }
   .hero-content h1 { font-size: clamp(1.7rem, 7vw, 2.3rem); }
   .section { padding: 3rem 0; }
@@ -1371,6 +1419,12 @@ button { font-family: inherit; cursor: pointer; }
 }
 
 @media (max-width: 480px) {
+  .brand-text strong {
+    max-width: 165px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .four-col { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: 1fr; }
